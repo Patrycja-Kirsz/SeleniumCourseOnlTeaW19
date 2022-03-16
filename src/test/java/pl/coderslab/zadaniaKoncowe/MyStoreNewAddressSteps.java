@@ -82,28 +82,7 @@ public class MyStoreNewAddressSteps {
 
     @Then("^Address information should be (.*), (.*), (.*), (.*), (.*)$")
     public void AccountCreated(String expectedAlias, String expectedAddress, String expectedCity, String expectedPostalCode, String expectedPhone) {
-           /* WebElement aliasInput = driver.findElement(By.name("alias"));
-            aliasInput.getAttribute("value");
-            String successAlias = aliasInput.getAttribute("value");
-            assertEquals(expectedAlias, successAlias);
-            WebElement addressInput = driver.findElement(By.name("address1"));
-            addressInput.getAttribute("value");
-            String successAddress = addressInput.getAttribute("value");
-            assertEquals(expectedAddress, successAddress);
-            WebElement cityInput = driver.findElement(By.name("city"));
-           cityInput.getAttribute("value");
-            String successCity = cityInput.getAttribute("value");
-            assertEquals(expectedCity, successCity);
-           WebElement postalCodeInput = driver.findElement(By.name("postcode"));
-            postalCodeInput.getAttribute("value");
-            String successCode = postalCodeInput.getAttribute("value");
-            assertEquals(expectedPostalCode, successCode);
-           WebElement phoneInput = driver.findElement(By.name("phone"));
-           phoneInput.getAttribute("value");
-            String successPhone = phoneInput.getAttribute("value");
-            assertEquals(expectedPhone, successPhone);
-            WebElement saveInput = driver.findElement(By.cssSelector("button.btn.btn-primary.float-xs-right"));
-            saveInput.click();*/
+          
 
         WebElement addressInformation = driver.findElements(By.xpath("//div[@class = 'address-body']")).get(1);
         addressInformation.getText();
