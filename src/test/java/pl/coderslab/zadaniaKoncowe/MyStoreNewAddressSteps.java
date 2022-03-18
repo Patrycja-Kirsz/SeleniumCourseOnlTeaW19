@@ -67,27 +67,32 @@ public class MyStoreNewAddressSteps {
     @And("^Address information: (.*), (.*), (.*), (.*), (.*) are filled out$")
     public void shouldAddData(String alias, String address, String city, String postalCode, String phone) {
         WebElement aliasInput = driver.findElement(By.name("alias"));
+        aliasInput.clear();
         aliasInput.sendKeys(alias);
         WebElement addressInput = driver.findElement(By.name("address1"));
+        addressInput.clear();
         addressInput.sendKeys(address);
         WebElement cityInput = driver.findElement(By.name("city"));
+        cityInput.clear();
         cityInput.sendKeys(city);
         WebElement postalCodeInput = driver.findElement(By.name("postcode"));
+        postalCodeInput.clear();
         postalCodeInput.sendKeys(postalCode);
         WebElement phoneInput = driver.findElement(By.name("phone"));
+        phoneInput.clear();
         phoneInput.sendKeys(phone);
         WebElement saveInput = driver.findElement(By.cssSelector("button.btn.btn-primary.float-xs-right"));
         saveInput.click();
     }
 
     @Then("^Address information should be (.*), (.*), (.*), (.*), (.*)$")
-    public void AccountCreated(String expectedAlias, String expectedAddress, String expectedCity, String expectedPostalCode, String expectedPhone) {
+    public void AccountCreated(String alias, String address, String city, String postalCode, String phone) {
           
 
         WebElement addressInformation = driver.findElements(By.xpath("//div[@class = 'address-body']")).get(1);
         addressInformation.getText();
         String successInfo = addressInformation.getText();
-        assertEquals(expectedAlias + "\n" + "Jan Nowak\n" + expectedAddress + "\n" + expectedCity + "\n" + expectedPostalCode + "\n" + "United Kingdom\n" + expectedPhone, successInfo);
+        assertEquals(alias + "\n" + "Jan Nowak\n" + address + "\n" + city + "\n" + postalCode + "\n" + "United Kingdom\n" + phone, successInfo);
     }
 
     @BeforeEach

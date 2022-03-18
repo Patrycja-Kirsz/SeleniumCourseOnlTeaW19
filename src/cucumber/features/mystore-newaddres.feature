@@ -11,8 +11,9 @@ Feature: Adding new address to existing account on MyStore
     And The field Addresses is clicked
     And Create new address is clicked
     And Address information: <alias>, <address>, <city>, <postalCode>, <phone> are filled out
-    Then Address information should be <expectedAlias>, <expectedAddress>, <expectedCity>, <expectedPostalCode>, <expectedPhone>
+    Then Address information should be <alias>, <address>, <city>, <postalCode>, <phone>
 
     Examples:
-      |alias          | address | city  | postalCode | phone  | expectedAlias | expectedAddress | expectedCity | expectedPostalCode | expectedPhone |
-      |Dr             | Długa   | Gdańsk| 80111      | 123456 | Dr            | Długa           | Gdańsk       | 80111              | 123456        |
+      |alias          | address | city  | postalCode | phone  |
+      |Dr             | Długa   | Gdańsk| 80111      | 123456 |
+      |Mr             | Orłowska| Gdynia| 81200      | 654321 |
