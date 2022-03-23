@@ -57,8 +57,7 @@ public class MyStoreNewAddressSteps {
 
     @And("^Create new address is clicked$")
     public void shouldClickNewAddress() {
-        //WebElement newAddress = driver.findElement(By.xpath("//div[@class = 'addresses-footer']"));
-        //WebElement newAddress = driver.findElements(By.xpath("//i[@class = 'material-icons']"))
+     
         WebElement newAddress = driver.findElements(By.xpath("//i[@class = 'material-icons']")).get(3);
         newAddress.click();
 
