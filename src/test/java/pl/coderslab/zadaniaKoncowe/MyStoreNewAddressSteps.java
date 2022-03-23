@@ -85,7 +85,7 @@ public class MyStoreNewAddressSteps {
         saveInput.click();
     }
 
-    @Then("^Address information should be (.*), (.*), (.*), (.*), (.*)$")
+    @Then("^Added address information should be (.*), (.*), (.*), (.*), (.*)$")
     public void AccountCreated(String alias, String address, String city, String postalCode, String phone) {
           
 

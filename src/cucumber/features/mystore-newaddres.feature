@@ -11,7 +11,7 @@ Feature: Adding new address to existing account on MyStore
     And The field Addresses is clicked
     And Create new address is clicked
     And Address information: <alias>, <address>, <city>, <postalCode>, <phone> are filled out
-    Then Address information should be <alias>, <address>, <city>, <postalCode>, <phone>
+    Then Added address information should be <alias>, <address>, <city>, <postalCode>, <phone>
 
     Examples:
       |alias          | address | city  | postalCode | phone  |
